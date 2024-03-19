@@ -2,8 +2,14 @@
 const tavoloVip = ['Brad Pitt', 'Johnny Depp', 'Lady Gaga', 'Cristiano Ronaldo', 'Georgina Rodriguez', 'Chiara Ferragni', 'Fedez', 'George Clooney', 'Amal Clooney', 'Maneskin'];
 
 
-// Dichiaro la variabile
-const vipTables = [];
+// Implemento il metodo ''map'', che è un'alternativa al ciclo ''For''.
+const vipTables = tavoloVip.map((ospite, indice) => {
+  return {
+    nomeDelTavolo: `Tavolo VIP ${indice + 1}`,
+    nomeDellOspite: ospite,
+    postoOccupato: indice + 1
+  };
+});
 
 
 // Eseguo il ciclo For.
